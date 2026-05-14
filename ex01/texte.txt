@@ -1,0 +1,29 @@
+Quel est la difference entre l'encapsulation privee, public, et protected pour un heritage ?
+
+Si on a des donnees qui sont publics, elles seront accessible par tout le monde.
+Elle seront utilisable, par le parent, l'enfant ou l'exterieur
+
+Si on a des donnees qui sont privees, elles seront accessible seulement par la classe parent.
+L'enfant devra lui aussi passer par les methodes getter/setter pour acceder a ces variables.
+
+Si on a des donnees qui sont protected, elles seront accessible autant par le parent que l'enfant.
+C'est l'heritage de famille. Autrement dit il ne sera pas necessaire de passer par des methodes.
+Par contre le public devra passer par les methodes pour acceder aux variables protected.
+
+Qu'est ce que le mode d'heritage ou filtre d'heritage ?
+
+le filtre d'heritage peut se definir comme le mecanisme qui decide de la maniere dont les droits 
+d'acces sont transferes ou restreint lors de la transmission a la generation suivante.
+
+Le filtre public : il laisse les variables tel qu'elles sont dans le parents.
+le public = public
+le protected = protected
+le privee = privee
+
+Le filtre protected : Il degrade ce qui est public au rang de protege. la consequence de ce type
+d'heritage est qu'on ne veut pas dans certains objet enfant, qu'il y ait un acces depuis l'exterieur.
+Ce filtre serait applique si on veut par contre que d'autres enfants recoivent un heritage public et
+qu'on est d'accord par contre pour eux que les elements heritees soient vu par l'exterieur.
+
+Le filtre private : Il verrouille tout. les enfants qui herite ont des varaibles que meme eux ne peuvent pas
+voir directement. 
